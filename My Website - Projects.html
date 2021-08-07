@@ -3,6 +3,7 @@
 <title>MDP Webpage</title>
 <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
 <link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" href="assets/Normalize.css">
 <style>
 * {box-sizing:border-box;scrollbar-color:#2a2c2e #1c1e1f}
 
@@ -10,23 +11,23 @@ a:not(hover){text-decoration:none}
 
 /* Style the body and html */
 html,body,input,textarea,select,button {
-  font-family:"Product Sans",Arial,Segoe UI;
-  margin:0;
-  border-color:#575757;
-  color:#fff;
-  background:#181818
+	font-family:"Product Sans",Arial,Segoe UI;
+	margin:0;
+	border-color:#575757;
+	color:#fff;
+	background:#181818 linear-gradient(90deg,#020d19,#190605);
 }
 
 /* Header/logo Title */
 #header {
-  text-shadow:2px 2px 2px #000;
-  cursor:default;
-  user-select:none;
-  user-drag:none;
-  padding:40px;
-  text-align:center;
-  background:url('https://mdp43140.github.io/bg.jpg');
-  color:white;
+	text-shadow:2px 2px 2px #000;
+	cursor:default;
+	user-select:none;
+	user-drag:none;
+	padding:40px;
+	text-align:center;
+	background:url('https://mdp43140.github.io/bg.jpg');
+	color:white;
 }
 
 /* Increase the font size of the heading */
@@ -37,30 +38,30 @@ html,body,input,textarea,select,button {
 
 /* Sticky navbar - toggles between relative and fixed,depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However,for these versions the navbar will inherit default position */
 #navbar {
-  background:#333;
-  background:linear-gradient(135deg,#333 0%,#223 80%);
-  position:sticky;
-  top:0;
-  left:0;
-  right:0;
-  box-shadow:0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  overflow:none;
-  width:100%;
-  min-height:46px;
-  max-height:92px;
-  display:block;
-  z-index:2;
-  transition:top 0.3s;
+	background:#333;
+	background:linear-gradient(135deg,#333,#223 80%);
+	position:sticky;
+	top:0;
+	left:0;
+	right:0;
+	box-shadow:0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	overflow:none;
+	width:100%;
+	min-height:46px;
+	max-height:92px;
+	display:block;
+	z-index:2;
+	transition:top 0.3s;
 }
 
 /* Style the navigation bar links */
 #navbar a {
-  float:left;
-  display:block;
-  color:#fff;
-  text-align:center;
-  padding:14px 20px;
-  text-decoration:none;
+	float:left;
+	display:block;
+	color:#fff;
+	text-align:center;
+	padding:14px 20px;
+	text-decoration:none;
 	z-index:2;
 	transition:box-shadow 0.2s;
 }
@@ -75,16 +76,16 @@ html,body,input,textarea,select,button {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex:30%;
-  background:#181a1b;
-  padding:20px;
+	flex:30%;
+	background:#181a1b;
+	padding:20px;
 }
 
 /* Main column */
 main {
-  flex:70%;
-  background:#101010;
-  padding:20px;
+	flex:70%;
+	background:#101010;
+	padding:20px;
 }
 
 
@@ -118,36 +119,37 @@ body.bright footer {background:#aaa}
 </head>
 <body>
 <section id="home">
-<div id="navbar"> <!-- Navigation Bar -->
-  <a href="https://mdp43140.github.io/">Home</a>
-  <a href="https://mdp43140.github.io/My Website - Projects.html" class="active">Projects</a>
-  <a href="javascript:retheme()" class="right" oncontextmenu="retheme();return false">Change Theme</a>
-  <a href="https://mdp43140.github.io/My Website - About Me.html" class="right">About Me</a>
-  <a href="https://github.com/mdp43140" class="right">GitHub</a>
-</div>
+<nav id="navbar"> <!-- Navigation Bar -->
+	<a href="https://mdp43140.github.io/">Home</a>
+	<a href="https://mdp43140.github.io/My Website - Projects.html" class="active">Projects</a>
+	<a href="javascript:retheme()" class="right" title="Change Theme" id="rethemeBtn" oncontextmenu="retheme();return false">☀️</a>
+	<a href="https://mdp43140.github.io/My Website - About Me.html" class="right">About Me</a>
+	<a href="https://github.com/mdp43140" class="right">GitHub</a>
+</nav>
 <header id="header"> <!-- Header Title -->
-  <h1>MDP Website</h1>
-<p>Welcome To My Website.</p>
-<!--p>This Site Will Be My <strong>New</strong> Home On The Web.</p-->
+	<h1>MDP Website</h1>
+	<p>Welcome To My Website.</p>
+	<!--p>This Site Will Be My <strong>New</strong> Home On The Web.</p-->
 </header>
-  <main> <!-- Left Side Page -->
-    <h2>No Trash + Pure Clean YouTube</h2><img class="fakeimg" href="https://github.com/MDP43140/NoTrash-PureClean-YT" src="https://mdp43140.github.io/assets/img/project_ntpcyt.png">
-    <br>
-    <h2>PCCU (Windows)</h2><img class="fakeimg" href="https://github.com/MDP43140/pccu_windows" src="https://mdp43140.github.io/assets/img/project_pccu_windows.png">
-    <br>
-    <h2>PCCU (Linux)</h2><img class="fakeimg" href="https://github.com/MDP43140/pccu_linux" src="https://mdp43140.github.io/assets/img/project_pccu_linux.png">
-    <br>
-    <h2>Offline Base64 Encoder & Decoder</h2><img class="fakeimg" href="https://github.com/MDP43140/Offline_Base64_Encoder_n_Decoder" src="https://mdp43140.github.io/assets/img/project_b64_encndec.png">
-    <br>  
-    <h2>CMP (Custom Media Player)</h2><img class="fakeimg" href="https://github.com/MDP43140/" src="https://mdp43140.github.io/Assets/img/project_1.png">
-    <br>
-    <h2>Water Particles</h2><img class="fakeimg" href="https://github.com/MDP43140/" src="https://mdp43140.github.io/Assets/img/project_2.png">
-    <br>
-    <h2>SnakeQL</h2><img class="fakeimg" href="https://github.com/MDP43140/snakeql" src="https://mdp43140.github.io/Assets/img/project_snakeql.png">
+	<main> <!-- Left Side Page -->
+		<h2>No Trash + Pure Clean YouTube</h2><img class="fakeimg" href="https://github.com/MDP43140/NoTrash-PureClean-YT" src="https://mdp43140.github.io/assets/img/project_ntpcyt.png">
+		<br>
+		<h2>PCCU (Windows)</h2><img class="fakeimg" href="https://github.com/MDP43140/pccu_windows" src="https://mdp43140.github.io/assets/img/project_pccu_windows.png">
+		<br>
+		<h2>PCCU (Linux)</h2><img class="fakeimg" href="https://github.com/MDP43140/pccu_linux" src="https://mdp43140.github.io/assets/img/project_pccu_linux.png">
+		<br>
+		<h2>Offline Base64 Encoder & Decoder</h2><img class="fakeimg" href="https://github.com/MDP43140/Offline_Base64_Encoder_n_Decoder" src="https://mdp43140.github.io/assets/img/project_b64_encndec.png">
+		<br>  
+		<h2>CMP (Custom Media Player)</h2><img class="fakeimg" href="https://github.com/MDP43140/" src="https://mdp43140.github.io/Assets/img/project_1.png">
+		<br>
+		<h2>Water Particles</h2><img class="fakeimg" href="https://github.com/MDP43140/" src="https://mdp43140.github.io/Assets/img/project_2.png">
+		<br>
+		<h2>SnakeQL</h2><img class="fakeimg" href="https://github.com/MDP43140/snakeql" src="https://mdp43140.github.io/Assets/img/project_snakeql.png">
 </main>
 <footer class="footer">
-  <p>Made By MDP43140</p>
+	<p>Made With ❤️ By MDP43140</p>
 </footer>
+<script src="https://polyfill.io/v3/polyfill.js" crossorigin="Anonymous"></script>
 <script src="assets/index.js"></script>
 </body>
 </html>
