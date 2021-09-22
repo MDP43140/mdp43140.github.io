@@ -28,3 +28,6 @@ window.onmousemove=()=>{
 	else if(window.event.clientY > 46 && navbar_unlock){navbar.style.top = "-50px"}
 }
 searchInput.onkeyup=e=>{if(e.which == 13){e.preventDefault();submitSearch.click();searchInput.value = ''}};
+
+// Ripple Effect
+for(let i of document.querySelectorAll("button, #navbar a")){i.style.position="relative";i.style.overflow="hidden";i.addEventListener("click",function(e){let x,y,b,c=document.createElement("div");e.pageX&&e.pageY?(x=e.pageX-this.offsetLeft,y=e.pageY-this.offsetTop):(b=c.getBoundingClientRect(),x=b.right,y=b.bottom);c.style=`top:${y}px;left:${x}px;position:absolute;opacity:.4;background:${document.body.className.indexOf("bright")?"#000":"#fff"};border-radius:50%;width:5px;height:5px`;c.animate([{transform:'scale(99)',opacity:0}],{duration:400,easing:'ease-out'}).onfinish=x=>c.remove();this.append(c)})}
