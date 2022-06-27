@@ -1,150 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>MDP Webpage</title>
 <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-<link rel="shortcut icon" href="favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
 <link rel="stylesheet" href="assets/Normalize.css">
-<style>
-* {box-sizing:border-box;scrollbar-color:#2a2c2e #1c1e1f}
-
-a:not(hover){text-decoration:none}
-
-/* Style the body and html */
-html,body,input,textarea,select,button {
-	font-family:"Product Sans",Arial,Segoe UI;
-	margin:0;
-	border-color:#575757;
-	color:#fff;
-	background:#181818 linear-gradient(90deg,#020d19,#190605);
-}
-
-/* Header/logo Title */
-#header {
-	text-shadow:2px 2px 2px #000;
-	cursor:default;
-	user-select:none;
-	user-drag:none;
-	padding:40px;
-	text-align:center;
-	background:url('https://mdp43140.github.io/bg.jpg');
-	color:white;
-}
-
-/* Increase the font size of the heading */
-#header h1 {font-size:40px}
-
-/* Increase the font size of the heading */
-#header p {color:#fff}
-
-/* Sticky navbar - toggles between relative and fixed,depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However,for these versions the navbar will inherit default position */
-#navbar {
-	background:#333;
-	background:linear-gradient(135deg,#333,#223 80%);
-	position:sticky;
-	top:0;
-	left:0;
-	right:0;
-	box-shadow:0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-	overflow:none;
-	width:100%;
-	min-height:46px;
-	max-height:92px;
-	display:block;
-	z-index:2;
-	transition:top 0.3s;
-}
-
-/* Style the navigation bar links */
-#navbar a {
-	float:left;
-	display:block;
-	color:#fff;
-	text-align:center;
-	padding:14px 20px;
-	text-decoration:none;
-	z-index:2;
-	transition:box-shadow 0.2s;
-}
-
-#navbar a.right {float:right}
-#navbar a.active {background:#666;color:#fff;z-index:3;box-shadow:0 0 2px 0 rgba(0,0,0,0.4),0 0 5px 0 rgba(0,0,0,0.24)}
-#navbar a:hover {background:#ddd;color:#000;z-index:4;box-shadow:0 0 8px 0 rgba(0,0,0,0.4),0 0 10px 0 rgba(0,0,0,0.24)}
-
-/* Column container */
-.row {display:flex;flex-wrap:wrap}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-	flex:30%;
-	background:#181a1b;
-	padding:20px;
-}
-
-/* Main column */
-main {
-	flex:70%;
-	background:#101010;
-	padding:20px;
-}
-
-
-/* Fake image And Fake Small image,just for example */
-.fakeimg {color:#fff;background:#555;min-width:200px;min-height:50px;max-width:100%;max-height:200px;width:200px;height:50px;transition:0.5s ease-in-out;border-radius:4px;box-shadow:0 2px 3px 0 rgba(0,0,0,0.4),0 2px 4px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000}
-.fakeimg:hover {background:#666;width:360px;height:200px}
-
-.fakeimg:hover .item-thumbnail img{transform:scale(1.1)}
-.fakeimg:hover .filter-item-content{opacity:0.94;padding-top:25%}
-.item-thumbnail{display:inline;float:left;overflow:hidden;width:100%}
-.item-thumbnail img{display:block;max-width:100%;height:auto;transform:scale(1);transition:0.5s}
-.filter-item-content{cursor:default;user-select:none;user-drag:none;position:absolute;left:10px;top:10px;right:10px;bottom:10px;background-color:#000;color:#fff;padding-top:0%;transition:all 0.2s;opacity:0}
-.filter-item-content .title{text-align:center;font-size:18px}
-/*ENDS HERE ----------------------- */
-
-/* Footer */
-footer {padding:20px;text-align:center;background:#333;box-shadow:0 3px -4px 0 rgba(0,0,0,0.4),0 2px -8px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000}
-
-/* Responsive layout - when the screen is less than 700px wide,make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width:700px) {.row {flex-direction:column}}
-
-/* Responsive layout - when the screen is less than 400px wide,make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width:400px) {#navbar a {float:none;width:100%}}
-
-/* Bright Theme */
-body.bright {color:#000;background:#fff}
-body.bright .side {background:#f1f1f1}
-body.bright main {background:#fff}
-body.bright footer {background:#aaa}
-</style>
+<link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
 <section id="home">
-<nav id="navbar"> <!-- Navigation Bar -->
-	<a href="https://mdp43140.github.io/">Home</a>
-	<a href="https://mdp43140.github.io/My Website - Projects.html" class="active">Projects</a>
+<nav id="bar"> <!-- Navigation Bar -->
+	<a href="My Website.html">Home</a>
+	<a href="#" class="active">Projects</a>
 	<a href="javascript:retheme()" class="right" title="Change Theme" id="rethemeBtn" oncontextmenu="retheme();return false">☀️</a>
-	<a href="https://mdp43140.github.io/My Website - About Me.html" class="right">About Me</a>
+	<a href="#aboutme" class="right">About Me</a>
 	<a href="https://github.com/mdp43140" class="right">GitHub</a>
 </nav>
-<header id="header"> <!-- Header Title -->
+<header> <!-- Header Title -->
 	<h1>MDP Website</h1>
 	<p>Welcome To My Website.</p>
 	<!--p>This Site Will Be My <strong>New</strong> Home On The Web.</p-->
 </header>
-	<main> <!-- Left Side Page -->
-		<h2>No Trash + Pure Clean YouTube</h2><img class="fakeimg" href="https://github.com/MDP43140/NoTrash-PureClean-YT" src="https://mdp43140.github.io/assets/img/project_ntpcyt.png">
-		<br>
-		<h2>PCCU (Windows)</h2><img class="fakeimg" href="https://github.com/MDP43140/pccu_windows" src="https://mdp43140.github.io/assets/img/project_pccu_windows.png">
-		<br>
-		<h2>PCCU (Linux)</h2><img class="fakeimg" href="https://github.com/MDP43140/pccu_linux" src="https://mdp43140.github.io/assets/img/project_pccu_linux.png">
-		<br>
-		<h2>Offline Base64 Encoder & Decoder</h2><img class="fakeimg" href="https://github.com/MDP43140/Offline_Base64_Encoder_n_Decoder" src="https://mdp43140.github.io/assets/img/project_b64_encndec.png">
-		<br>  
-		<h2>CMP (Custom Media Player)</h2><img class="fakeimg" href="https://github.com/MDP43140/" src="https://mdp43140.github.io/Assets/img/project_1.png">
-		<br>
-		<h2>Water Particles</h2><img class="fakeimg" href="https://github.com/MDP43140/" src="https://mdp43140.github.io/Assets/img/project_2.png">
-		<br>
-		<h2>SnakeQL</h2><img class="fakeimg" href="https://github.com/MDP43140/snakeql" src="https://mdp43140.github.io/Assets/img/project_snakeql.png">
+<main> <!-- Left Side Page -->
+	<a href="https://github.com/mdp43140/BaDomain"><div class="fakeimg"><span>BaDomain</span><img src="assets/img/project_ntpcyt.png"></div></a>
+	<a href="https://github.com/mdp43140/NoTrash-PureClean-YT"><div class="fakeimg"><span>No Trash + Pure Clean YouTube</span><img src="assets/img/project_ntpcyt.png"></div></a>
+	<a href="https://github.com/mdp43140/PCCU_windows"><div class="fakeimg"><span>PCCU (Windows)</span><img src="assets/img/project_pccu_windows.png"></div></a>
+	<a href="https://github.com/mdp43140/PCCU_linux"><div class="fakeimg"><span>PCCU (Linux)</span><img src="assets/img/project_pccu_linux.png"></div></a>
+	<a href="https://github.com/mdp43140/water_particles"><div class="fakeimg"><span>Water Particles</span><img src="assets/img/project_2.png"></div></a>
+	<a href="https://github.com/mdp43140/SnakeQL"><div class="fakeimg"><span>SnakeQL</span><img src="assets/img/project_snakeql.png"></div></a>
 </main>
 <footer class="footer">
 	<p>Made With ❤️ By MDP43140</p>
