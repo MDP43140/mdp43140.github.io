@@ -1,6 +1,6 @@
 * {box-sizing:border-box;scrollbar-color:#2a2c2e #1c1e1f}
 a:not(:hover){text-decoration:none}
-a:not([url]){text-decoration:none;color:#fff}
+a:not([url]){color:#fff}
 h1,h2,h3{font-weight:lighter}
 body > * {
 	font-family:Cantarell,Ubuntu,"Product Sans",Roboto,"Segoe UI",Arial;
@@ -24,6 +24,7 @@ body > section > nav#bar {
 	z-index:2;
 	transition:top 0.3s;
 	border-radius:0 0 8px 8px;
+	user-select:none;
 }
 body > section > nav#bar > a {
 	float:left;
@@ -35,11 +36,11 @@ body > section > nav#bar > a {
 	border-radius:4px;
 	text-decoration:none;
 	z-index:2;
-	transition:box-shadow 0.2s;
+	transition:box-shadow 0.1s ease-in-out;
 }
 body > section > nav#bar > a.right {float:right}
-body > section > nav#bar > a.active {background:#666;color:#fff;z-index:3;box-shadow:0 0 2px 0 rgba(0,0,0,0.4),0 0 5px 0 rgba(0,0,0,0.24)}
-body > section > nav#bar > a:hover {background:#ddd;color:#000;z-index:4;box-shadow:0 0 8px 0 rgba(0,0,0,0.4),0 0 10px 0 rgba(0,0,0,0.24)}
+body > section > nav#bar > a.active {cursor:default;background:#fff6;color:#fff;z-index:3;box-shadow:0 0 2px 0 rgba(0,0,0,0.4),0 0 5px 0 rgba(0,0,0,0.24)}
+body > section > nav#bar > a:hover {background:#fffd;color:#000;z-index:4;box-shadow:0 0 8px 0 rgba(0,0,0,0.4),0 0 10px 0 rgba(0,0,0,0.24)}
 body > section > header {
 	text-shadow:2px 2px 2px #000;
 	margin-top:-1em;
@@ -65,10 +66,7 @@ body > section main {
 	padding:20px;
 }
 body > section > footer {padding:20px;text-align:center;background:#333;box-shadow:0 3px -4px 0 rgba(0,0,0,0.4),0 2px -8px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000}
-
-
-body > section .fakeimg {margin-bottom:8px;font-size:0.8rem;color:#fff;background:#555;min-width:200px;min-height:50px;max-width:100%;max-height:200px;width:200px;height:50px;transition:0.5s ease-in-out;border-radius:4px;box-shadow:0 2px 3px 0 rgba(0,0,0,0.4),0 2px 4px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000;overflow:hidden}
-body > section .fakeimg > span {position:absolute;transform:translate(8px,8px)}
+body > section .fakeimg {margin-bottom:8px;color:#fff;background:#555;min-width:200px;min-height:50px;max-width:100%;max-height:200px;width:200px;height:50px;transition:0.5s ease-in-out;border-radius:4px;box-shadow:0 2px 3px 0 rgba(0,0,0,0.4),0 2px 4px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000;overflow:hidden}
 body > section .fakeimg > img {max-width:100%;max-height:100%;border:none;outline:none}
 body > section .fakeimg:hover {background:#666;width:360px;height:200px}
 body > section .fakeimg:hover .item-thumbnail > img{transform:scale(1.1)}
@@ -78,13 +76,14 @@ body > section .fakeimg > .item-thumbnail > img{display:block;max-width:100%;hei
 body > section .fakeimg > .filter-item-content{cursor:default;user-select:none;user-drag:none;position:absolute;left:10px;top:10px;right:10px;bottom:10px;background-color:#000;color:#fff;padding-top:0%;transition:all 0.2s;opacity:0}
 body > section .fakeimg > .filter-item-content .title{text-align:center;font-size:18px}
 
-
-@media screen and (max-width:700px) {body.bright > section > .row {flex-direction:column}}
-@media screen and (max-width:400px) {body > section > nav#bar > a {float:none;width:100%}}
 body.bright {color:#000;background:#fff}
+body.bright > section > nav#bar {background:#ccc linear-gradient(135deg,#ccc,#bbc 80%)}
+body.bright > section > nav#bar > a.active {background:#0006}
+body.bright > section > nav#bar > a:hover {background:#000d;color:#fff}
+body.bright > section > nav#bar > a:not(:hover){text-shadow:0 0 4px #000f}
 body.bright > section > .row > .side {color:#000;background:#f1f1f1}
 body.bright > section > .row > main {color:#000;background:#fff}
-body.bright > section > footer {background:#aaa;text-shadow:none}
+body.bright > section > footer {background:#aaa}
 
 body > section > nav#bar > form.search-container{float:center;display:inline-block}
 body > section > nav#bar > form.search-container > input[type=text]{
@@ -120,6 +119,8 @@ body > section > nav#bar > form.search-container > input[type=text]:hover {backg
 body > section > nav#bar > form.search-container > input[type=text]:focus {background:#eee;color:#111;width:50%}
 body > section > nav#bar > form.search-container > input[type=text]:focus nav#bar .search-container button {opacity:1;padding:12px;display:inline-block}
 body > section > nav#bar > form.search-container > button:hover{background:#ccc}
+@media screen and (max-width:700px) {body.bright > section > .row {flex-direction:column}}
+@media screen and (max-width:400px) {body > section > nav#bar > a {float:none;width:100%}}
 
 
 
