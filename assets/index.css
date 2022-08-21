@@ -3,10 +3,10 @@ a:not(:hover){text-decoration:none}
 a:not([url]){color:#fff}
 h1,h2,h3{font-weight:lighter}
 body > * {
-	font-family:Cantarell,Ubuntu,"Product Sans",Roboto,"Segoe UI",Arial;
+	font-family:Cantarell,Ubuntu,"Google Sans",Roboto,"Segoe UI",Arial;
 	margin:0;
 	border-color:#575757;
-	color:#fff;
+	color:#eee;
 	background:#181818 linear-gradient(90deg,#020d19,#190605);
 }
 body > section > nav#bar {
