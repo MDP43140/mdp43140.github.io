@@ -3,7 +3,7 @@
 <head>
 <title>MDP Webpage</title>
 <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-<link rel="shortcut icon" href="assets/favicon.png">
+<link rel="icon" href="assets/favicon.png">
 <link rel="stylesheet" href="assets/Normalize.css">
 <link rel="stylesheet" href="assets/index.css">
 </head>
@@ -11,36 +11,34 @@
 <section id="home">
 <nav id="bar"> <!-- Navigation Bar -->
 	<a href="#" class="active" title="Homepage">🏠️</a>
-	<a href="My Website - Projects.html" title="Have a look of what project im doing :D">Projects</a>
+	<a href="MyProjects.html" title="Have a look of what project im doing :D">Projects</a>
 	<a href="javascript:retheme()" class="right" title="Change Theme" id="rethemeBtn" oncontextmenu="retheme();return false" title="Toggle dark theme">☀️</a>
-	<a href="#aboutme" class="right" title="About me. the page is in build for now">About Me</a>
+	<a href="AboutMe.html" class="right" title="Stuff about me">About Me</a>
 	<a href="https://github.com/mdp43140" class="right" title="Most of my projects are Open-source! check out my GitHub page :)">GitHub</a>
 </nav>
-<header> <!-- Header Title -->
-	<h1>MDP Website</h1>
-	<p>Welcome To My Website.</p>
+<header class="header"> <!-- Header Title -->
+	<h1 class="header__title">MDP Website</h1>
+	<p class="header__desc">Welcome To My Website.</p>
 	<!--p>This Site Will Be My <strong>New</strong> Home On The Web.</p-->
 </header>
-<div class="row"> <!-- You Can Customize Here -->
-	<div class="side"> <!-- Right Side Page -->
-		<h3>My Projects 🔨️:</h3>
-		<div class="fakeimg">BaDomain</div><br>
-		<div class="fakeimg">No Trash + Pure Clean YouTube</div><br>
-		<div class="fakeimg">PCCU: Windows</div><br>
-		<div class="fakeimg">PCCU: Linux</div><br>
-		<div class="fakeimg">Tiniest Water Particle</div><br>
-		<div class="fakeimg">elt</div><br>
-	</div>
-	<main> <!-- Left Side Page -->
-		<div>
-			<h2>Title</h2>
-			<h5>'Sub' Title</h5>
-			<div class="fakeimg">Image</div>
-			<p>Desc 1</p>
-			<p>Desc 2</p>
+<main> <!-- Left Side Page -->
+	<div>
+		<h2>Little things here and there</h2>
+		<div class="navlinkimg">
+			<h4 class="title">Try to hover on me</h4>
+		<span class="desc">There you go! this is what i mean :)</span>
+			<img src="assets/img1_30.11.22.png">
 		</div>
-	</main>
-</div>
+		<h5>the most major was improving visual look on the card that changes size when hovered, its kinda buggy for now but i will fix it if i have a time for it</h5>
+	</div>
+	<div>
+		<h2>Major website revamp</h2>
+		<div class="navlinkimg">
+			<img src="assets/img1_22.08.22.png">
+		</div>
+		<h5>i did several minor stuff like removing sidebar (because its unused), and adding scramble text, and nicer ripple effect</h5>
+	</div>
+</main>
 <footer class="footer">
 	<p>Made With ❤️ By <a href="https://github.com/mdp43140">MDP43140</a>. Built with <a href="https://pages.github.com">GitHub pages</a>.</p>
 </footer>

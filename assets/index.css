@@ -1,6 +1,6 @@
 * {box-sizing:border-box;scrollbar-color:#2a2c2e #1c1e1f}
 a:not(:hover){text-decoration:none}
-a:not([url]){color:#fff}
+body a:not([url]){color:#fff}
 h1,h2,h3{font-weight:lighter}
 body > * {
 	font-family:Cantarell,Ubuntu,"Google Sans",Roboto,"Segoe UI",Arial;
@@ -54,38 +54,48 @@ body > section > header {
 }
 body > section > header > h1 {font-size:2.5rem;font-weight:lighter}
 body > section > header > p {color:#fff}
-body > section > .row {display:flex;flex-wrap:wrap}
+/*body > section > .row {display:flex;flex-wrap:wrap}
 body > section > .row > .side {
 	flex:30%;
 	background:#181a1b;
 	padding:20px;
-}
+}unused*/
+body > section main img {border-radius:4px;box-shadow:0 0 8px 0 rgba(0,0,0,0.4)}
 body > section main {
-	flex:70%;
+	padding: 0.5rem 5%;/*flex:70%;unused*/
 	background:#101010;
 	padding:20px;
+	min-height:calc(100vh - 300px)
 }
-body > section > footer {padding:20px;text-align:center;background:#333;box-shadow:0 3px -4px 0 rgba(0,0,0,0.4),0 2px -8px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000}
-body > section .fakeimg {margin-bottom:8px;color:#fff;background:#555;min-width:200px;min-height:50px;max-width:100%;max-height:200px;width:200px;height:50px;transition:0.5s ease-in-out;border-radius:4px;box-shadow:0 2px 3px 0 rgba(0,0,0,0.4),0 2px 4px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000;overflow:hidden}
-body > section .fakeimg > img {max-width:100%;max-height:100%;border:none;outline:none}
-body > section .fakeimg:hover {background:#666;width:360px;height:200px}
-body > section .fakeimg:hover .item-thumbnail > img{transform:scale(1.1)}
-body > section .fakeimg:hover .filter-item-content{opacity:0.94;padding-top:25%}
-body > section .fakeimg > .item-thumbnail{display:inline;float:left;overflow:hidden;width:100%}
-body > section .fakeimg > .item-thumbnail > img{display:block;max-width:100%;height:auto;transform:scale(1);transition:0.5s}
-body > section .fakeimg > .filter-item-content{cursor:default;user-select:none;user-drag:none;position:absolute;left:10px;top:10px;right:10px;bottom:10px;background-color:#000;color:#fff;padding-top:0%;transition:all 0.2s;opacity:0}
-body > section .fakeimg > .filter-item-content .title{text-align:center;font-size:18px}
+body > section > footer {padding:20px;text-align:center;background:#333;margin-top:-1rem;border-radius:1rem 1rem 0 0;box-shadow:0 -3px 4px 0 rgba(0,0,0,0.4),0 -2px 8px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000}
+body > section .navlinkimg {margin-bottom:8px;color:#fff;background:#555;min-width:200px;min-height:50px;max-width:100%;max-height:200px;width:200px;height:50px;transition:0.5s ease-in-out;border-radius:4px;box-shadow:0 2px 3px 0 rgba(0,0,0,0.4),0 2px 4px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000;overflow:hidden;display:block}
+body > section .navlinkimg::before {content:'';position:absolute;width:inherit;height:inherit;background:linear-gradient(#0000,#000a);opacity:0;transition:0.5s ease-in-out}
+body > section .navlinkimg > .title {position:absolute;display:inline-block;margin:0;padding:0;width:inherit;height:inherit;z-index:2;transform:translate(16px,calc(100% - 34px));transition:0.5s ease-in-out}
+body > section .navlinkimg > .desc {position:absolute;display:inline-block;margin:0;padding:0;width:inherit;height:inherit;z-index:1;transform:translate(8px,calc(100% - 24px));opacity:0;transition:0.5s ease-in-out}
+body > section .navlinkimg > img {position:absolute;width:inherit;height:inherit;object-fit:cover;border:none;outline:none;z-index:0}
+body > section .navlinkimg:hover {background:#666;width:360px;height:200px}
+body > section .navlinkimg:hover::before {opacity:1}
+body > section .navlinkimg:hover .item-thumbnail > img{transform:scale(1.1)}
+body > section .navlinkimg:hover .filter-item-content{opacity:0.94;padding-top:25%}
+body > section .navlinkimg:hover > .title {transform:translate(8px,calc(100% - 44px))}
+body > section .navlinkimg:hover > .desc {opacity:1}
+body > section .navlinkimg > .item-thumbnail{display:inline;float:left;overflow:hidden;width:100%}
+body > section .navlinkimg > .item-thumbnail > img{display:block;max-width:100%;height:auto;transform:scale(1);transition:0.5s}
+body > section .navlinkimg > .filter-item-content{cursor:default;user-select:none;user-drag:none;position:absolute;left:10px;top:10px;right:10px;bottom:10px;background-color:#000;color:#fff;padding-top:0%;transition:all 0.2s;opacity:0}
+body > section .navlinkimg > .filter-item-content .title{text-align:center;font-size:18px}
 
 body.bright {color:#000;background:#fff}
+body.bright a:not([url]){color:#000}
 body.bright > section > nav#bar {background:#ccc linear-gradient(135deg,#ccc,#bbc 80%)}
 body.bright > section > nav#bar > a.active {background:#0006}
 body.bright > section > nav#bar > a:hover {background:#000d;color:#fff}
 body.bright > section > nav#bar > a:not(:hover){text-shadow:0 0 4px #000f}
 body.bright > section > .row > .side {color:#000;background:#f1f1f1}
-body.bright > section > .row > main {color:#000;background:#fff}
-body.bright > section > footer {background:#aaa}
+body.bright > section main {color:#000;background:#fff}
+body.bright > section > footer {color:#fff;background:#aaa;box-shadow:0 0 8px 0 rgba(0,0,0,0.4)}
+body.bright > section > footer a {color:#fff!important}
 
-body > section > nav#bar > form.search-container{float:center;display:inline-block}
+/*body > section > nav#bar > form.search-container{float:center;display:inline-block}
 body > section > nav#bar > form.search-container > input[type=text]{
 	display:inline;
 	width:80px;
@@ -118,23 +128,10 @@ body > section > nav#bar > form.search-container > input[type=text]:not(:focus){
 body > section > nav#bar > form.search-container > input[type=text]:hover {background:#ddd;color:#000}
 body > section > nav#bar > form.search-container > input[type=text]:focus {background:#eee;color:#111;width:50%}
 body > section > nav#bar > form.search-container > input[type=text]:focus nav#bar .search-container button {opacity:1;padding:12px;display:inline-block}
-body > section > nav#bar > form.search-container > button:hover{background:#ccc}
+body > section > nav#bar > form.search-container > button:hover{background:#ccc}unused*/
 @media screen and (max-width:700px) {body.bright > section > .row {flex-direction:column}}
 @media screen and (max-width:400px) {body > section > nav#bar > a {float:none;width:100%}}
 
-
-
-
-
-/* Great hint from redstapler: (https://redstapler.co/prefers-color-scheme-tutorial)
-@media (prefers-color-scheme:light){
-	.somelightthemecodehere {}
-	.somelightthemecodehere {}
-	.somelightthemecodehere {}
-}
-@media (prefers-color-scheme:dark){
-	.somedarkthemecodehere {}
-	.somedarkthemecodehere {}
-	.somedarkthemecodehere {}
-}
+/* Nice hint from https://redstapler.co/prefers-color-scheme-tutorial:
+@media (prefers-color-scheme:light/dark){}
 */
