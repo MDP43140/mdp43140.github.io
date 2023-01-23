@@ -16,20 +16,21 @@ body > * {
 body > section > nav#bar {
 	background:#333 linear-gradient(135deg,#333,#223 80%);
 	position:sticky;
-	top:0;
-	left:0;
-	right:0;
+	top:0%;
+	left:0px;
+	right:0px;
 	box-shadow:0 3px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-	overflow:none;
+	overflow:hidden;
 	width:100%;
-	min-height:50px;
-	max-height:92px;
+/*min-height:50px;
+	max-height:92px;*/
 	display:block;
 	z-index:2;
 	transition:top 0.3s;
 	border-radius:0 0 8px 8px;
 	user-select:none;
 }
+body > section > nav#bar:hover {top:0%!important;}
 body > section > nav#bar > a {
 	float:left;
 	display:block;
@@ -71,10 +72,11 @@ body > section > header {
 	cursor:default;
 	user-select:none;
 	user-drag:none;
-	padding:40px;
+	padding:3rem;
 	text-align:center;
 	background:url('bg.jpg');
 	background-size:cover;
+	background-position:center;
 	color:white;
 }
 body > section > header > h1 {font-size:2.5rem;font-weight:lighter}
@@ -85,25 +87,47 @@ body > section > .row > .side {
 	background:#181a1b;
 	padding:20px;
 }unused*/
-body > section main img {border-radius:4px;box-shadow:0 0 8px 0 rgba(0,0,0,0.4)}
-body > section main {
+body > section > main img {border-radius:4px;box-shadow:0 0 8px 0 rgba(0,0,0,0.4)}
+body > section > main {
 	padding: 0.5rem 5%;/*flex:70%;unused*/
 	background:#101010;
 	padding:20px;
 	min-height:calc(100vh - 300px)
 }
-body > section > footer {padding:1.3rem;text-align:center;background:#333;margin-top:-1rem;border-radius:1rem 1rem 0 0;box-shadow:0 -3px 4px 0 rgba(0,0,0,0.4),0 -2px 8px 0 rgba(0,0,0,0.4);text-shadow:2px 2px 2px #000}
-body > section .navlinkimg {margin:.2rem 0;color:#fff!important;background:#555;min-width:13rem;min-height:3rem;max-width:100%;max-height:13rem;width:13rem;height:3rem;transition:0.5s ease-in-out;border-radius:.3rem;box-shadow:0 .1rem .2rem 0 rgba(0,0,0,0.4),0 .1rem .2rem 0 rgba(0,0,0,0.4);text-shadow:.1rem .1rem .1rem #000;overflow:hidden;display:block}
+body > section > main [data-animateonscroll="slideup"] {
+	transform:translateY(5rem);
+	opacity:0;
+}
+body > section > main [data-animateonscroll="slideup"].animate__slideup {
+	transform:translateY(0px);
+	opacity:1;
+	animation:animate__slideup 500ms cubic-bezier(0.22,0.61,0.36,1);
+}
+@keyframes animate__slideup {
+	0% {transform:translateY(5rem);opacity:0}
+	100% {transform:translateY(0px);opacity:1}
+}
+body > section > footer {
+	padding:1.3rem;
+	text-align:center;
+	background:#333;
+	margin-top:-1rem;
+	width:100%;
+	border-radius:1rem 1rem 0 0;
+	box-shadow:0 -3px 4px 0 rgba(0,0,0,0.4),0 -2px 8px 0 rgba(0,0,0,0.4);
+	text-shadow:2px 2px 2px #000
+}
+body > section .navlinkimg {margin:.2rem 0;color:#fff!important;background:#fff5;min-width:13rem;min-height:3rem;max-width:100%;max-height:13rem;width:13rem;height:3rem;transition:0.5s ease-in-out;border-radius:.3rem;box-shadow:0 .1rem .2rem 0 rgba(0,0,0,0.4),0 .1rem .2rem 0 rgba(0,0,0,0.4);text-shadow:.1rem .1rem .1rem #000;overflow:hidden;display:block}
 body > section .navlinkimg > .wrapper {position:absolute;width:inherit;height:inherit;z-index:1;transition:0.5s ease-in-out;overflow:hidden}
 body > section .navlinkimg > .wrapper::before {content:'';position:absolute;width:inherit;height:inherit;background:linear-gradient(#0000,#000a);opacity:0;transition:0.5s ease-in-out}
 body > section .navlinkimg > .wrapper > .title,
 body > section .navlinkimg > .wrapper > .desc {position:absolute;display:inline-block;margin:0;padding:0;transition:0.5s ease-in-out;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;max-width:calc(100% - 1rem)}
-body > section .navlinkimg > .wrapper > .title {z-index:2;bottom:17px;left:14px}
+body > section .navlinkimg > .wrapper > .title {z-index:2;bottom:1rem;left:1rem}
 body > section .navlinkimg > .wrapper > .desc {z-index:1;bottom:.5rem;left:.5rem;opacity:0}
-body > section .navlinkimg > img {position:absolute;width:inherit;height:inherit;object-fit:cover;border:none;outline:none;z-index:0}
-body > section .navlinkimg:hover {background:#666;width:24rem;height:13rem}
+body > section .navlinkimg > img {position:absolute;width:inherit;height:inherit;object-fit:cover;border:none;outline:none;z-index:0;object-position:center}
+body > section .navlinkimg:hover {background:#fff6;width:24rem;height:13rem}
 body > section .navlinkimg:hover > .wrapper::before {opacity:1}
-body > section .navlinkimg:hover > .wrapper > .title {bottom:2rem;left:.5rem}
+body > section .navlinkimg:hover > .wrapper > .title {bottom:1.8rem;left:.5rem}
 body > section .navlinkimg:hover > .wrapper > .desc {opacity:1}
 body > section .navlinkimg > .item-thumbnail{display:inline;float:left;overflow:hidden;width:100%}
 body > section .navlinkimg > .item-thumbnail > img{display:block;max-width:100%;height:auto;transform:scale(1);transition:0.5s}
@@ -119,6 +143,8 @@ body.bright > section > nav#bar > a:not(:hover){text-shadow:0 0 4px #000f}
 body.bright > section > nav#bar > a::before {background:radial-gradient(600px circle at var(--cursor-x) var(--cursor-y),rgba(0,0,0,0.4),transparent 40%)}
 body.bright > section > .row > .side {color:#000;background:#f1f1f1}
 body.bright > section main {color:#000;background:#fff}
+body > section .navlinkimg {background:#0005}
+body > section .navlinkimg:hover {background:#0006}
 body.bright > section > footer {color:#fff;background:#aaa;box-shadow:0 0 8px 0 rgba(0,0,0,0.4)}
 body.bright > section > footer a {color:#fff!important}
 
@@ -157,7 +183,7 @@ body > section > nav#bar > form.search-container > input[type=text]:focus {backg
 body > section > nav#bar > form.search-container > input[type=text]:focus nav#bar .search-container button {opacity:1;padding:12px;display:inline-block}
 body > section > nav#bar > form.search-container > button:hover{background:#ccc}unused*/
 @media screen and (max-width:700px) {body.bright > section > .row {flex-direction:column}}
-@media screen and (max-width:400px) {body > section > nav#bar > a {float:none;width:100%}}
+@media screen and (max-width:400px) {body > section > nav#bar > a {width:calc(50% - 8px)}}
 
 /* Nice hint from https://redstapler.co/prefers-color-scheme-tutorial:
 @media (prefers-color-scheme:light/dark){}
