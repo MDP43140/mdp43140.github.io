@@ -10,8 +10,8 @@ window.addEventListener("load",_ => {
 		rethemeBtn.innerText = "☀️";
 	};*/
 	retheme=()=>{
-		document.body.classList.toggle("bright");
-		if (document.body.className.indexOf("bright") > -1){
+		document.body.classList.toggle("light");
+		if (document.body.className.indexOf("light") > -1){
 			rethemeBtn.innerText = "🌘️";
 		} else {
 			rethemeBtn.innerText = "☀️";
