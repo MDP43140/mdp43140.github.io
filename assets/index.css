@@ -1,3 +1,4 @@
+html {overflow:hidden}
 body {
 	--fg-color:#eee;
 	--bg-color:#181818;
@@ -6,7 +7,7 @@ body.light {
 	--fg-color:#101010;
 	--bg-color:#eee;
 }
-* {box-sizing:border-box;scrollbar-color:#2a2c2e #1c1e1f}
+* {scrollbar-color:#2a2c2e #1c1e1f}
 a {text-decoration:none;position:relative}
 a:not([url]){color:var(--fg-color)}
 a:hover::before {width:100%}
@@ -51,6 +52,7 @@ body > * {
 	margin:0;
 	border-color:#575757;
 }
+body > section {height:inherit}
 body > section > nav#bar {
 	background:#333 linear-gradient(135deg,#333,#345 80%);
 	position:sticky;
@@ -82,7 +84,7 @@ body > section > nav#bar > a {
 	transition:box-shadow 0.1s ease-in-out;
 }
 body > section > nav#bar > a.right {float:right}
-body > section > nav#bar > a.active {cursor:default;background:#fff6;color:#fff;z-index:3;box-shadow:0 0 2px 0 rgba(0,0,0,0.4),0 0 5px 0 rgba(0,0,0,0.24)}
+body > section > nav#bar > a[aria-current="page"] {cursor:default;background:#fff6;color:#fff;z-index:3;box-shadow:0 0 2px 0 rgba(0,0,0,0.4),0 0 5px 0 rgba(0,0,0,0.24)}
 body > section > nav#bar > a:hover {background:#fffd;color:#000;z-index:4;box-shadow:0 0 8px 0 rgba(0,0,0,0.4),0 0 10px 0 rgba(0,0,0,0.24)}
 /*Cool hover effect (slightly modified to be as lightweight as possible) by hyperplexed*/
 body > section > nav#bar:hover > a::before {opacity:1}
@@ -107,9 +109,9 @@ body > section > nav#bar > a::before {
 body > section > header {
 	text-shadow:2px 2px 2px #000;
 	margin-top:-1em;
-	margin-bottom:-2.5em;
+	margin-bottom:-4.5em;
 	padding:3em;
-	padding-bottom:4em;
+	padding-bottom:6em;
 	cursor:default;
 	user-select:none;
 	user-drag:none;
@@ -119,10 +121,11 @@ body > section > header {
 	background-size:cover;
 	background-position:center;
 	color:white;
-	mask-image:linear-gradient(#000 70%,#0000);
+	mask-image:linear-gradient(#000 70%,#0003 90%,#0000 100%);
+	transform-style:preserve-3d;
 }
-body > section > header > h1 {font-size:clamp(2.5rem,3vw + 3vh,3.5rem);font-weight:lighter}
-body > section > header > p {color:#fff;font-size:clamp(1rem,1.5vw + 1.5vh,1.5rem)}
+body > section > header > .header__title {font-size:clamp(2.5rem,3vw + 3vh,3.5rem);font-weight:lighter}
+body > section > header > .header__desc {color:#fff;font-size:clamp(1rem,1.5vw + 1.5vh,1.5rem)}
 /*body > section > .row {display:flex;flex-wrap:wrap}
 body > section > .row > .side {
 	flex:30%;
@@ -163,6 +166,8 @@ body > section > footer > span.copyright {
 	position:absolute;
 	bottom:1em;
 	left:1em;
+	font-weight:300;
+	font-family:Roboto;
 }
 body > section > footer > button.goTop {
 	position:absolute!important; /* temporary workaround getting overriden by MDRippleFX */
@@ -233,6 +238,9 @@ body > section > nav#bar > form.search-container > input[type=text]:focus nav#ba
 body > section > nav#bar > form.search-container > button:hover{background:#ccc}unused*/
 @media screen and (max-width:700px) {body.light > section > .row {flex-direction:column}}
 @media screen and (max-width:400px) {body > section > nav#bar > a {width:calc(50% - 8px)}}
+@media (prefers-reduced-motion){ /* from Fireship */
+	body > section > main [data-animateonscroll="slideup"].animate__slideup {animation:none!important}
+}
 
 /* Nice hint from https://redstapler.co/prefers-color-scheme-tutorial:
 @media (prefers-color-scheme:light/dark){}

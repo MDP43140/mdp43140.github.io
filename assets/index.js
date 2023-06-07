@@ -64,7 +64,7 @@ window.addEventListener("load",_ => {
 		const animate = el.dataset.animateonscroll;
 		if (effects.includes(animate)){
 			const effect = 'animate__' + animate;
-			if (i.intersectionRatio > 0){
+			if (i.isIntersecting){
 				el.classList.add(effect);
 			} else {
 				el.classList.remove(effect);
