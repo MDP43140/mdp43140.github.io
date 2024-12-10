@@ -1,0 +1,12 @@
+# This file gives signal to bad bots
+# that they cannot access the contents
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: Diffbot
+User-agent: FacebookBot
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: WhatsApp
+User-agent: 360Spider
+User-agent: Baiduspider
+Disallow: /
