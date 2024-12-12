@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
-<section id="home">
 <nav id="bar">
 	<a href="#main-content">Skip to main content</a>
 	<a href="#" aria-current="page" title="Homepage">🏠️</a>
@@ -18,24 +17,53 @@
 	<a href="https://github.com/mdp43140" class="right" title="Most of my projects are Open-source! check out my GitHub page :)">GitHub</a>
 	<a href="https://codeberg.org/mdp43140" class="right" title="Most of my projects are Open-source! check out my Codeberg page :)">Codeberg</a>
 </nav>
-<header class="header">
+<header>
 	<h1 class="header__title">MDP43140's website</h1>
 	<p class="header__desc">Welcome to my website!</p>
 </header>
-<main id="main-content">
+<main id="main-content" style="max-width:60ch">
+	<h2 data-animateonscroll="slideup">Random thoughts and some news</h2>
 	<div data-animateonscroll="slideup">
-		<h2>My GitHub account is flagged️</h2>
-		<a href="assets/img/ghFlagged.png"><div class="navlinkimg">
+		<div class="navlinkimg">
 			<div class="wrapper">
-				<h4 class="title">GitHub flagged my account</h4>
+				<h4 class="title">Happy new year</h4>
+				<span class="desc">We're almost there, 2025</span>
+			</div>
+			<img src="assets/img/nightSky.webp">
+		</div>
+		<h4>I don't know what else to say, but my hope is that i can get a better PC than what I currently have</h4>
+	</div>
+	<div data-animateonscroll="slideup">
+		<div class="navlinkimg">
+			<div class="wrapper">
+				<h4 class="title">Another website update!</h4>
+				<span class="desc">Just series of little changes I guess</span>
+			</div>
+			<img src="assets/img1_12.12.24.png">
+		</div>
+		<h4>Finally after couple months of being busy in real life, i have a time and reason to update this site<ul><li>Added "Skip to main content" button (press Tab+Enter, if that doesn't work, you probably clicked somewhere which changes the focused area. click the navigation pane and try again)</li><li>Remove unnesecary comments</li><li>Remove hidden "This Site Will Be My *New* Home On The Web" text (this website is actually made from a template, which as time goes on i customized things further, and also i feel that text is just a bit weird to put it lol)</li><li>Add robots.txt file (my signal to companies like Meta, Baidu, Bytedance, OpenAI, Google bots to not scrape my site)</li><li>Change "MDP" to "MDP43140" (too much MDP's out there lol)</li><li>Change header description</li><li>Fix go to top button</li><li>Copyright name is now clickable (redirects to my GitHub page)</li><li>Add current page on title</li><li>And other minor tweaks and changes.</li><li>(sadly) Remove hover effect on card (because it looks weird, adds up CSS complexity, and on Chromium-based browser the transition is lagging behind)</li><li>Use ul-li for bullet points (ul makes things wider but it looks nicer too so idk)</li><li>Changed fonts to Poppins (CDN using privacy-respecting Google Fonts alternative (proxy), maybe later switch to actual fast CDN)</li><li>CSS tweaks and fixes.</li><li>Move and rename image files properly.</li><li>Remove "section" element (replaced by main#main-content, and also its written in broken way)</li><li>Remove generic class from element (eg. header.header &gt; header)</li><li>Rename some links</li><li>And many more small changes</li></ul></h4>
+	</div>
+	<div data-animateonscroll="slideup">
+		<div class="navlinkimg">
+			<div class="wrapper">
+				<h4 class="title">Urgent website changes</h4>
+				<span class="desc">Polyfill[.]io is now BAD</span>
+			</div>
+			<img src="assets/img/techRadarPolyfillIoMalwareSnippet.png">
+		</div>
+		<h4>Polyfill[.]io is a free service that provides code that adds missing functions to older browsers, but out of nowhere it was suddenly bought by a Chinese company without any notification to developers that were using it, and now its literally malware that at specific time and browser will redirect to gambling sites. don't worry, its now removed from this site, plus i blocked it in BaDomain NoMalware blocklist. <a href="https://techradar.com/pro/security/thousands-of-websites-told-to-ditch-polyfill-service-after-chinese-hackers-hijack-it-to-serve-malware">Read this article from TechRadar for more details</a></h4>
+	</div>
+	<div data-animateonscroll="slideup">
+		<div class="navlinkimg">
+			<div class="wrapper">
+				<h4 class="title">My GitHub account is flagged️</h4>
 				<span class="desc">I don't know what happened, and I did nothing wrong</span>
 			</div>
 			<img src="assets/img/ghFlagged.png">
-		</div></a>
-		<h5>My GitHub account got flagged for no reason, it happened when I'm failed to login GitHub Desktop multiple times (due to an unknown bug that changes login URL,<br>i had to dig up the log to get actual URL, shame that no one had any solutions at all),<br>couple months later i migrated to ProtonMail, couple weeks later i commited some changes just like usual<br>But GitHub desktop complaining that it cant push the commit, i tried login again,<br>but it said that my account was not exist, thinking that i probably get hacked, i check my email<br>and i got an email from GitHub to force-reset my password, i did that and make sure<br>no devices are hacked (which in this case there wasn't any devices hacked)<br>One week later i tried commiting again on GitHub Desktop for my BaDomain project,<br>but i realized that i cant access my repos, i tried logging in,<br>everything looks okay as usual, until i realized that GitHub now flagged my account<br>I dont know what caused this to happen, i did nothing wrong, I tried finding solutions,<br>including contacting GitHub support for account reinstatement request,<br>To this day (7 days since the reinstatement request was made),<br>GitHub staff is still not responding to my request.</h5>
+		</div>
+		<h4>My GitHub account got flagged for no reason, it happened when I'm failed to login GitHub Desktop multiple times (due to an unknown bug that changes login URL, i had to dig up the log to get actual URL, shame that no one had any solutions at all), couple months later i migrated to ProtonMail, couple weeks later i commited some changes just like usual But GitHub desktop complaining that it cant push the commit, i tried login again, but it said that my account was not exist, thinking that i probably get hacked, i check my email and i got an email from GitHub to force-reset my password, i did that and make sure no devices are hacked (which in this case there wasn't any devices hacked) One week later i tried commiting again on GitHub Desktop for my BaDomain project, but i realized that i cant access my repos, i tried logging in, everything looks okay as usual, until i realized that GitHub now flagged my account I dont know what caused this to happen, i did nothing wrong, I tried finding solutions, including contacting GitHub support for account reinstatement request, To this day (7 days since the reinstatement request was made),<br>GitHub staff is still not responding to my request.<br><br>Update: the fact that you can see this webpage again means GitHub staff unbanned my account finally</h4>
 	</div>
 	<div data-animateonscroll="slideup">
-		<h2>Another semi-major update</h2>
 		<div class="navlinkimg">
 			<div class="wrapper">
 				<h4 class="title">Minor update...️</h4>
@@ -43,52 +71,51 @@
 			</div>
 			<img src="">
 		</div>
-		<h5>Changelogs:<br>• Added a simple privacy policy.<br>• Now header font scaling is more dynamic (uses clamp, and by calculating viewport width &amp; height)<br>• Removed evil hideous 0D character (saves 1byte on every newlines).<br>• Added more stuff to footer to make it less boring<br>• Change 'bright' to 'light'<br>• Changed ':root' to 'body' (until i find convenient way to select html element (like document.rootElement or something) and change its datakey without introducing quite long if-elses)<br>• Making use of --fg/bg-color CSS Variables.<br>• Add animated link hover.<br>• Added simple material button style (used on go to top footer button thing).<br>• And more...</h5>
+		<h4>Changelogs:<ul><li>Added a simple privacy policy.</li><li>Now header font scaling is more dynamic (uses clamp, and by calculating viewport width &amp; height)</li><li>Removed evil hideous 0D character (saves 1byte on every newlines).</li><li>Added more stuff to footer to make it less boring</li><li>Change 'bright' to 'light'</li><li>Changed ':root' to 'body' (until i find convenient way to select html element (like document.rootElement or something) and change its datakey without introducing quite long if-elses)</li><li>Making use of --fg/bg-color CSS Variables.</li><li>Add animated link hover.</li><li>Added simple material button style (used on go to top footer button thing).</li><li>And more...</li></ul></h4>
 	</div>
 	<div data-animateonscroll="slideup">
-		<h2>Another website update</h2>
 		<div class="navlinkimg">
 			<div class="wrapper">
-				<span class="desc">Another changes...️</span>
+				<h4 class="title">Another update️</h4>
+				<span class="desc">And yet another changes...️</span>
 			</div>
 			<img src="assets/img1_01.23.23.png">
 		</div>
-		<h5>Changelogs:<br>• Added cool scroll-linked effect (scroll up/down to see it)<br>• Fixed possibly footer width bug.<br>• Add proper project img sources (some are temporary placeholder images though...)<br>• Changed footer &amp; navbar text<br>• index.js scripts now wrapped within window.onload<br>• Navbar now shows 2 button on mobile browser<br>• Header background image alignment centered, and the source changed (hopefully not getting to any problem doing this)<br>• and a lot more!<br>• Use "•" instead of "+" for lists (like this one).</h5>
+		<h4>Changelogs:<ul><li>Added cool scroll-linked effect (scroll up/down to see it)</li><li>Fixed possibly footer width bug.</li><li>Add proper project img sources (some are temporary placeholder images though...)</li><li>Changed footer &amp; navbar text</li><li>index.js scripts now wrapped within window.onload</li><li>Navbar now shows 2 button on mobile browser</li><li>Header background image alignment centered, and the source changed (hopefully not getting to any problem doing this)</li><li>and a lot more!</li><li>Use "•" instead of "+" for lists.</li></ul></h4>
 	</div>
 	<div data-animateonscroll="slideup">
-		<h2>New cool navigation hover effect</h2>
 		<div class="navlinkimg">
 			<div class="wrapper">
-				<span class="desc">Navbar hover effect</span>
+				<h4 class="title">Navigation bar hover effect</h4>
+				<span class="desc">Hover your mouse there to see it</span>
 			</div>
 			<img src="assets/img1_01.12.22.png">
 		</div>
-		<h5>Another major improvement:<br>• Fixed card hover problem (caused by text overflow).<br>• Adding cool hover effect (its on the navbar, hover your mouse up there to see it)<br>• Fixed the header background cover<br>• Fixed h1,h2,h3 font weight too thin.</h5>
+		<h4>Another major improvement:<ul><li>Fixed card hover problem (caused by text overflow).</li><li>Adding cool hover effect (its on the navbar, hover your mouse up there to see it)</li><li>Fixed the header background cover</li><li>Fixed h1,h2,h3 font weight too thin.</li></ul></h4>
 	</div>
 	<div data-animateonscroll="slideup">
-		<h2>Little things here and there...</h2>
 		<div class="navlinkimg">
 			<div class="wrapper">
-				<h4 class="title">Try to hover on me</h4>
-				<span class="desc">There you go! this is what i mean :)</span>
+				<h4 class="title">Another changes</h4>
+				<span class="desc">On previous changes you can hover here for cool effect, but because of the complexity and its not looking cool, i decided to threw it off</span>
 			</div>
 			<img src="assets/img1_30.11.22.png">
 		</div>
-		<h5>the most major was improving visual look on the card that changes size when hovered, its kinda buggy for now but i will fix it if i have a time for it</h5>
+		<h4>the most major was improving visual look on the card that changes size when hovered, its kinda buggy for now but i will fix it if i have a time for it</h4>
 	</div>
 	<div data-animateonscroll="slideup">
-		<h2>Major website revamp</h2>
 		<div class="navlinkimg">
 			<div class="wrapper">
-				<span class="desc">Website changes️</span>
+				<h4 class="title">Website changes️</h4>
+				<span class="desc">Just a minor changes️</span>
 			</div>
 			<img src="assets/img1_22.08.22.png">
 		</div>
-		<h5>i did several minor stuff like removing sidebar (because its unused), and adding scramble text, and nicer ripple effect</h5>
+		<h4>i did several minor stuff like removing sidebar (because its unused), and adding scramble text, and nicer ripple effect</h4>
 	</div>
 </main>
-<footer class="footer">
-	<p>Made With ❤️ By <a href="https://github.com/mdp43140">MDP43140</a>. Hosted with <a href="https://pages.github.com">GitHub pages</a> and <a href="https://codeberg.page">Codeberg page</a>.</p>
+<footer>
+	<p>Made With ❤️ By <a href="https://github.com/mdp43140">mdp43140</a>. Hosted with <a href="https://pages.github.com">GitHub pages</a> and <a href="https://codeberg.page">Codeberg page</a>.</p>
 	<a href="privacy.html">Privacy Policy</a>
 	<span class="copyright">(C) 2020-2024 <a href="https://github.com/mdp43140">mdp43140</a></span>
 	<button class="goTop" onclick="document.documentElement.scroll({top:0,left:0,behavior:'smooth'})">↑</button>
